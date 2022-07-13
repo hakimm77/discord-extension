@@ -10,7 +10,7 @@
     "128": "logo192.png"
   },
   "action": {
-    "default_popup": "index.html",
+    "default_popup": "",
     "default_icon": {
       "16": "logo192.png",
       "32": "logo192.png",
@@ -18,5 +18,11 @@
       "128": "logo192.png"
     }
   },
+  "content_scripts": [
+    {
+      "matches": ["https://etherscan.io/verifySig/*"],
+      "js": ["./content.js"]
+    }
+  ],
   "permissions": ["activeTab"]
 }
