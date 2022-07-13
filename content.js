@@ -9,7 +9,7 @@ const signature = document.getElementById(
 const sendMessageDiscord = async () => {
   if (signature && message) {
     await fetch(
-      `http://localhost:8080/test-message?username=<VeryCoolProgrammer />&signature=${signature}&message=${message}`
+      `https://signing-discord-bot.herokuapp.com/send-message?username=<VeryCoolProgrammer />&signature=${signature}&message=${message}`
     )
       .then((response) => response.json())
       .then((data) => console.log(data));
